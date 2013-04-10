@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+
+
+gem "omniauth-twitter"
+
+gem 'devise'
+
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
