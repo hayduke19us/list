@@ -1,11 +1,13 @@
 List::Application.routes.draw do
+  
+
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"},
-                     path_names: {sign_in: "login", sign_out: "logout"}
+              path_names: {sign_in: "login", sign_out: "logout"}
   
   
 
   get "home/index"
-
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

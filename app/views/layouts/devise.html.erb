@@ -8,15 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-	<% if notice %>
-	<div class="alert-box">
-		<%= notice %>
-		<%= alert %>
+	<div class="row">
+		<div class="small-5 small-centered columns">
+			<%= yield %>
+		</div>
   </div>
-  <% end %>		
-	
-	
-<%= yield %>
-
 </body>
 </html>
+
+

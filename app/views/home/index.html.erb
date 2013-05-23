@@ -1,12 +1,30 @@
-<div class="container">
+<div class="row"> 
+	<div class="small-6 small-centered column">
+    <h1 class="subheader">Memorandum Elapsus</h1>
+	</div>
+
+</div>
+<div class="row">
 	<div id="user_nav">
-	  <% if user_signed_in? %>
-	    Logged in as <strong><%= current_user.email %></strong>
-	    <%= link_to "Edit profile", edit_user_registration_path %>
-	    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-	  <% else %>
-	    <%= link_to "Sign up", new_user_registration_path %> |  
-	    <%= link_to "Login", new_user_session_path %>
-	  <% end %>
-	<div>
+		<div class="small-6 small-centered columns">
+	  	<% if user_signed_in? %>
+		    <p><h5 class="subheader">Logged in as <strong><%= current_user.email %></strong></h5></p>
+		    <p><h5 class="subheader"><%= Time.now.to_date.to_formatted_s :long_ordinal %></h5></p>
+		    <%= link_to "Edit profile", edit_user_registration_path %> |
+		    <%= link_to "Logout", destroy_user_session_path, method: :delete %> | 
+		    <%= link_to "Memories", "" %>
+		 
+		  <% else %>
+		    <%= link_to "Sign up", new_user_registration_path %> |  
+		    <%= link_to "Login", new_user_session_path %>
+		  <% end %>
+		
+	  <div>
+	</div>	
+</div>
+<div class="row">
+	<div class="small-10 small-centered columns">
+		<%= @user %>
+		<%= image_tag "brain_chinese.png", :id => "brain_chinese"%>
+	</div>
 </div>
