@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 
+gem 'better_errors'
 
 gem "omniauth-twitter"
 
